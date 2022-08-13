@@ -65,7 +65,7 @@ class ContentDetailView(APIView):
         return Response(204)
 
 class ContentFilterView(APIView):
-    def filter(self, request):
+    def get(self, request):
         title_param = request.query_params.get("title")
 
         contents = Content.objects.filter(title__contains=title_param)
