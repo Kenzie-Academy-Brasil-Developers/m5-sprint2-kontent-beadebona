@@ -62,7 +62,7 @@ class ContentDetailView(APIView):
         
         content.delete()
         
-        return Response(204)
+        return Response(status=204)
 
 class ContentFilterView(APIView):
     def get(self, request):
